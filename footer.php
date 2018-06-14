@@ -15,9 +15,6 @@
 					<a href="<?php echo home_url('/get-started'); ?>">
 						<li>Get Started</li>
 					</a>
-					<a href="">
-						<li>Site Map</li>
-					</a>
 					<a href="http://prepacadtutors.wpengine.com/privacy-policy/">
 						<li>Privacy Policy</li>
 					</a>

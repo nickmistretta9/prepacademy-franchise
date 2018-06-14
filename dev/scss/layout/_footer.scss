@@ -67,22 +67,24 @@
 					color:#fff;
 					background:$brand-info;
 					margin:0 15px;
-					padding:10px 15px;
 					transform:rotate(-45deg);
 					transition:all 0.3s ease-in-out;
+					height:40px;
+					width:40px;
 					&:hover {
 						transform:rotate(-90deg);
 						i {
 							transform:rotate(90deg);
 						}
 					}
-					&:last-child {
-						padding:10px 17px;
-					}
 					i {
 						font-size:22px;
 						transform:rotate(45deg);
 						transition:all 0.3s ease-in-out;
+						height:100%;
+						display:flex;
+						align-items:center;
+						justify-content:center;
 					}
 				}
 			}

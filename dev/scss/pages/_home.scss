@@ -1,6 +1,5 @@
 .hero {
 	position:relative;
-	padding-top:85px;
 	.hero-slider {
 		img {
 			@include max-width(1500px) {
@@ -20,10 +19,12 @@
 	}
 	.hero-caption {
 		position:absolute;
-		@include center(x);
-		top:15%;
+		@include center();
 		display:flex;
 		flex-flow:column wrap;
+		@include max-width(700px) {
+			width:80%;
+		}
 		.btn-info {
 			margin:30px auto 0;
 			width:60%;
@@ -52,18 +53,6 @@
 			@include max-width($screen-sm) {
 				width:100%;
 			}
-		}
-		@include max-width(1100px) {
-			top:20%;
-		}
-		@include max-width($screen-sm) {
-			top:25%;
-		}
-		@include max-width(700px) {
-			top:35%;
-		}
-		@include max-width($screen-xs) {
-			top:40%;
 		}
 	}
 }
@@ -119,7 +108,7 @@
 	}
 	.flex {
 		display:flex;
-		@include max-width($screen-sm) {
+		@include max-width(1250px) {
 			flex-wrap:wrap;
 		}
 		.cta-box {
@@ -132,14 +121,14 @@
 			box-shadow:0 0 0em 0.14em $brand-primary;
 			border:0.25em solid $brand-success;
 			transition:all 0.3s ease-in-out;
-			@include max-width($screen-sm) {
+			@include max-width(1250px) {
 				margin-bottom:30px;
 			}
-			@include max-width($screen-xs) {
+			@include max-width(650px) {
 				flex:1 1 100%;
 			}
 			&:hover {
-				transform:scale(1.1);
+				transform:scale(1.05);
 				background:$brand-info;
 				.cta-action {
 					background:$brand-primary;
@@ -149,10 +138,14 @@
 				}
 			}
 			&:first-child {
-				transform-origin:left;
+				@include min-width(650px) {
+					transform-origin:left;
+				}
 			}
 			&:last-child {
-				transform-origin:right;
+				@include min-width(1250px) {
+					transform-origin:right;
+				}
 			}
 			.icon-box {
 				background-image:url('../images/ribbon-bg.png');
@@ -658,16 +651,37 @@
 		.group {
 			position:relative;
 		}
+		.caldera-grid {
+			.form-control {
+				height:auto;
+			}
+			select {
+				caret-color:#fff;
+				appearance:menulist;
+			}
+			::placeholder {
+				color:#fff;
+			}
+		}
 		input, textarea, select {
 			background:none;
-			border:none;
 			box-shadow:none;
 			caret-color:#fff;
 			margin-top:10px;
-			color:rgba(lighten($brand-primary, 30%), 0.7);
-		}
-		::placeholder {
-			color:rgba(lighten($brand-primary, 30%), 0.7);	
+			font-size:23px;
+			color:#fff;
+			::placeholder {
+				color:#fff;	
+			}
+			position:relative;
+			&:after {
+				content:'';
+				position:absolute;
+				width:100%;
+				bottom:0;
+				left:0;
+				height:1px;
+			}
 		}
 		span {
 			content:'';
@@ -686,14 +700,33 @@
 				top:0;
 			}
 		}
-		.btn-info {
+		.btn-info, .btn-default {
+			background:$brand-info;
 			margin:10px auto;
 			display:block;
 			padding:20px 30px;
 			transition:all 0.3s ease-in-out;
 			border:none;
+			color:#fff;
+			max-width:100%;
+			text-align: center;
 			&:hover {
 				background:$brand-primary;
+				color:#fff;
+			}
+			@include max-width(950px) {
+				font-size:20px;
+			}
+			@include max-width(850px) {
+				font-size:18px;
+				padding:20px;
+			}
+			@include max-width($screen-xs) {
+				font-size:16px;
+				padding:20px 40px;
+			}
+			@include max-width(400px) {
+				padding:20px;
 			}
 		}
 	}

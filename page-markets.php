@@ -14,10 +14,10 @@ Template Name: Markets Page
 			<div class="flex">
 				<div class="picture">
 					<img src="<?php bloginfo('template_directory'); ?>/dist/images/franchise-form-img.png" alt="">
-					<button class="btn-info"><a href="">Contact Prep Academy Tutors</a></button>
+					<!-- <button class="btn-info"><a href="http://franchise.prepacadtutors.wpengine.com/get-started/">Contact Prep Academy Tutors</a></button> -->
 				</div>
 				<div class="form">
-					<?php include (TEMPLATEPATH . '/dist/inc/contactForm-inner.php'); ?>
+					<?php include (TEMPLATEPATH . '/dist/inc/contactForm.php'); ?>
 				</div>
 			</div>
 		</div>

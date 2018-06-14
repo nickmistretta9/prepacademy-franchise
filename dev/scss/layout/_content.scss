@@ -3,7 +3,11 @@
 	background-size:cover;
 	background-position:50%;
 	min-height:700px;
-	padding-top:150px;
+	padding-top:100px;
+	@include max-width(700px) {
+		min-height:850px;
+		padding-top:50px;
+	}
 	.container-fluid {
 		max-width:1500px;
 	}
@@ -15,8 +19,10 @@
 			background:rgba(255,255,255,0.8);
 			box-shadow:0 0 1em #000000;
 			padding:30px 10px;
+			width:65%;
 			@include max-width($screen-sm) {
 				flex-wrap:wrap;
+				width:100%;
 			}
 			.picture, .form {
 				@include max-width($screen-sm) {
@@ -55,35 +61,88 @@
 				.group {
 					position:relative;
 				}
+				.caldera-grid {
+					.form-control {
+						height:40px;
+					}
+					#fld_7683514_1 {
+						height:auto !important;
+					}
+					.form-group {
+						margin-bottom: 10px;
+					}
+					select {
+						caret-color:$brand-primary;
+						appearance:menulist;
+					}
+					::placeholder {
+						color:$brand-primary;
+					}
+				}
 				input, textarea, select {
 					background:none;
-					border:none;
 					box-shadow:none;
-					caret-color:#7d7d7d;
-					margin-top:10px;
-					color:rgba(#7d7d7d, 1);
-				}
-				::placeholder {
-					color:rgba(#7d7d7d, 1);	
+					caret-color:$brand-primary;
+					font-size:20px;
+					color:$brand-primary;
+					border:1px solid $brand-primary;
+					::placeholder {
+						color:$brand-primary;	
+					}
+					position:relative;
+					&:after {
+						content:'';
+						position:absolute;
+						width:100%;
+						bottom:0;
+						left:0;
+						height:1px;
+					}
 				}
 				span {
 					content:'';
-					width:90%;
+					width:100%;
 					height:1px;
 					left:0;
-					border:1px solid rgba($brand-primary,1);
+					border:1px solid rgba(255,255,255,0.4);
 					border-radius:0.2em;
 					transition:all 0.3s ease-in-out;
 					transform-origin:top;
 					top:90%;
 					position:absolute;
 					display:block;
-					@include max-width($screen-sm) {
-						width:100%;
-					}
 					&.open {
 						height:100%;
 						top:0;
+					}
+				}
+				.btn-info, .btn-default {
+					background:$brand-info;
+					margin:10px auto;
+					display:block;
+					padding:20px 30px;
+					transition:all 0.3s ease-in-out;
+					border:none;
+					color:#fff;
+					max-width:100%;
+					text-align: center;
+					&:hover {
+						background:$brand-primary;
+						color:#fff;
+					}
+					@include max-width(950px) {
+						font-size:20px;
+					}
+					@include max-width(850px) {
+						font-size:18px;
+						padding:20px;
+					}
+					@include max-width($screen-xs) {
+						font-size:16px;
+						padding:20px 40px;
+					}
+					@include max-width(400px) {
+						padding:20px;
 					}
 				}
 			}
@@ -564,7 +623,6 @@
 	}
 }
 .contact-content {
-	padding-top:100px;
 	background-image:url('../images/contact-page-bg.jpg');
 	padding-bottom:100px;
 	h3 {

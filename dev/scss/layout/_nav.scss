@@ -9,20 +9,36 @@
 		justify-content:flex-end;
 		padding:15px 0;
 		max-width:1500px;
+		align-items:center;
 		@include max-width(1750px) {
-			max-width:1170px;
-			padding-left:70px;
-		}
-		@include max-width(1400px) {
-			padding-left:50px;
+			padding-left:35px;
 			justify-content:center;
+		}
+		@include max-width(1700px) {
+			max-width:1300px;
+		}
+		@include max-width(1550px) {
+			max-width:1170px;
+			padding-left:0;
 		}
 		@include max-width(1350px) {
 			justify-content:flex-end;
 			margin-right:0;
 		}
-		@include max-width(900px) {
+		@include max-width(1200px) {
+			max-width:1025px;
+		}
+		@include max-width(1150px) {
+			max-width:950px;
+		}
+		@include max-width(1050px) {
+			max-width:850px;
+		}
+		@include max-width($screen-md) {
 			max-width:none;
+		}
+		@include max-width(600px) {
+			max-width:400px;
 		}
 		@include max-width($screen-xs) {
 			padding-left:250px;
@@ -30,18 +46,19 @@
 		.social-icons {
 			display:flex;
 			align-items:center;
-			@include max-width(1400px) {
+			@include max-width(1450px) {
 				display:none;
 			}
 			a {
 				color:#fff;
 				background:$brand-info;
-				margin:0 15px;
-				padding:5px 10px;
+				margin:0 10px;
 				transform:rotate(-45deg);
 				transition:all 0.3s ease-in-out;
+				height:40px;
+				width:40px;
+				text-decoration:none;
 				@include max-width(1600px) {
-					padding:5px 10px;
 					margin:0 5px;
 				}
 				&:hover {
@@ -50,16 +67,14 @@
 						transform:rotate(90deg);
 					}
 				}
-				&:last-child {
-					padding:5px 12px;
-					@include max-width(1600px) {
-						padding:5px 12px;
-					}
-				}
 				i {
 					font-size:22px;
 					transform:rotate(45deg);
 					transition:all 0.3s ease-in-out;
+					height:100%;
+					display:flex;
+					align-items:center;
+					justify-content:center;
 					@include max-width(1600px) {
 						font-size:16px;
 					}
@@ -72,6 +87,9 @@
 			display:flex;
 			align-items:center;
 			margin-right:25px;
+			@include max-width(1150px) {
+				margin-right: 0;
+			}
 			@include max-width(700px) {
 				display:none;
 			}
@@ -79,6 +97,9 @@
 				color:#fff;
 				font-size:34px;
 				text-decoration:none;
+				@include max-width(1150px) {
+					font-size:26px;
+				}
 			}
 		}
 	}
@@ -122,9 +143,14 @@
 				transition:all 0.4s ease-in-out;
 				border-bottom:3px solid $brand-primary;
 				padding:10px;
+				line-height:1;
 				@include max-width(1500px) {
 					font-size:15px;
 					padding:5px 10px;
+				}
+				@include max-width(1100px) {
+					font-size:14px;
+					padding:5px 6px;
 				}
 			}
 		}
@@ -137,9 +163,6 @@
 
 .dropdown-menu {
 	padding: 0;
-	// background: #fff;
-	// margin-top:15px !important;
-
 	li {
 		transition:all 0.3s ease-in-out;
 		&:hover {
@@ -153,6 +176,7 @@
 			padding-top: 6px;
 			padding-bottom: 6px;
 			transition:all 0.3s ease-in-out;
+			font-size:18px;
 		}
 		&.active {
 			&:hover {
@@ -189,11 +213,24 @@
 			margin-top:-35px;
 		}
 	}
+	.mobile-toggle {
+		align-items:center;
+		@include max-width(700px) {
+			flex-direction:column;
+			align-items:flex-end;
+		}
+		.fa-bars {
+			text-align:right;
+			margin-right: 5px;
+			@include min-width($screen-md) {
+				width:100%;
+			}
+		}
+	}
 	.mobile-toggle, .call, .email {
 
 		@include max-width($grid-float-breakpoint-max) {
 			display: flex;
-			flex-flow:column wrap;
 			flex:1 1 15%;
 			justify-content:center;
 			margin-left: 30px;
@@ -206,6 +243,7 @@
 			color:#fff;
 			width:100%;
 			text-align:left;
+			align-items:center;
 		}
 		@include max-width(700px) {
 			align-items:flex-end;
@@ -215,6 +253,19 @@
 			flex:1 1 10%;
 			font-size:20px;
 			margin-left:0;
+		}
+		&.mobile-ctc {
+			text-decoration:none;
+			color:#fff;
+			display:flex;
+			i {
+				text-align:right;
+				margin-right:5px;
+			}	
+			@include max-width(700px) {
+				flex-direction:column;
+				align-items:flex-end;
+			}
 		}
 	}
 }

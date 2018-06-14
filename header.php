@@ -54,8 +54,8 @@
 	    <div class="container-fluid">
 	        <div id="st-trigger-effects" class="column mobile-buttons">
         		<div class="mobile-phone"><span>888.885.3968</span></div>
-        		<button class="call"><i class="fa fa-phone"></i> Call</button>
-        		<button class="email"><i class="fa fa-envelope"></i> Email</button>
+        		<a class="call mobile-ctc"><i class="fa fa-phone"></i> Call</a>
+        		<a class="email mobile-ctc"><i class="fa fa-envelope"></i> Email</a>
             	<button class="mobile-toggle" data-effect="st-effect-4"><i class="fa fa-bars"></i> Menu</button>
 	        </div>
 	        <div class="social-icons">
@@ -83,3 +83,4 @@
 	    </div>
 	</nav>
 </div>
+<div class="placeholder"></div>

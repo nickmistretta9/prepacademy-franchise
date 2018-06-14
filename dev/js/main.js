@@ -69,12 +69,18 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-	var topNav = $('.top-fix').offset().top;
-	$(window).on('scroll', function() {
-		if($(window).scrollTop() >= topNav) {
-			$('.logo').addClass('small');
+	var placeholderHeight = $('.top-fix').outerHeight();
+	$(window).scroll(function() {
+		var topBar = $('.top-fix'),
+		scroll = $(window).scrollTop(),
+		placeholder = $('.placeholder');
+
+		if(scroll >= 25) {
+			topBar.addClass('fixed');
+			placeholder.css('height', placeholderHeight);
 		} else {
-			$('.logo').removeClass('small');
+			topBar.removeClass('fixed');
+			placeholder.css('height', 0);
 		}
 	});
 
