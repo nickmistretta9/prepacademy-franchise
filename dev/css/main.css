@@ -8620,6 +8620,8 @@ iframe[name="google_conversion_frame"] {
           caret-color: #fff;
           margin-top: 10px;
           color: rgba(0, 138, 211, 0.7); }
+        .inner-content .content.contact .col-sm-6:last-child .contact-page-form select option {
+          color: #000; }
         .inner-content .content.contact .col-sm-6:last-child .contact-page-form ::placeholder {
           color: rgba(0, 138, 211, 0.7); }
         .inner-content .content.contact .col-sm-6:last-child .contact-page-form span {
@@ -9729,6 +9731,8 @@ form textarea {
     .home-contact .footer-contact .caldera-grid select {
       caret-color: #fff;
       appearance: menulist; }
+      .home-contact .footer-contact .caldera-grid select option {
+        color: #000; }
     .home-contact .footer-contact .caldera-grid ::placeholder {
       color: #fff; }
     .home-contact .footer-contact input, .home-contact .footer-contact textarea, .home-contact .footer-contact select {
