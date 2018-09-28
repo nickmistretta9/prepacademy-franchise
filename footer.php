@@ -3,19 +3,19 @@
 		<div class="flex">
 			<div class="links">
 				<ul>
-					<a href="http://prepacadtutors.wpengine.com/work-with-us/">
+					<a href="//prepacademytutors.com/work-with-us/">
 						<li>Work With Us</li>
 					</a>
-					<a href="http://prepacadtutors.wpengine.com/find-your-local-tutor/">
+					<a href="//prepacademytutors.com/find-your-local-tutor/">
 						<li>Find Your Local Tutor</li>
 					</a>
-					<a href="http://prepacadtutors.wpengine.com/blog/">
+					<a href="//prepacademytutors.com/blog/">
 						<li>Blog</li>
 					</a>
 					<a href="<?php echo home_url('/get-started'); ?>">
 						<li>Get Started</li>
 					</a>
-					<a href="http://prepacadtutors.wpengine.com/privacy-policy/">
+					<a href="//prepacademytutors.com/privacy-policy/">
 						<li>Privacy Policy</li>
 					</a>
 				</ul>

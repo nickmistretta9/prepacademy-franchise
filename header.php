@@ -46,7 +46,7 @@
 	<header class="site-header">
 		<a href="<?php echo home_url('/'); ?>"><img src="<?php bloginfo('template_directory'); ?>/dist/images/logo.png" alt="" class="logo"></a>
 		<div class="franchise">
-			<a href="http://prepacadtutors.wpengine.com/"><p>Back To Main Site</p></a>
+			<a href="//prepacademytutors.com/"><p>Back To Main Site</p></a>
 		</div>
 	</header>
 
