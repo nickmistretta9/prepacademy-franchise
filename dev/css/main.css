@@ -7836,7 +7836,8 @@ iframe[name="google_conversion_frame"] {
     left: 1%;
     top: 45%;
     z-index: 99;
-    transition: all 0.6s ease-in-out; }
+    transition: all 0.6s ease-in-out;
+    transform: scale(0.9); }
     @media screen and (max-width: 1750px) {
       .site-header .logo {
         transform: scale(0.85);
